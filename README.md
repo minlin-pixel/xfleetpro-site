@@ -23,5 +23,37 @@ Then open `http://localhost:5173`.
 
 ## Deploy
 
-Because it’s static, you can deploy by uploading these files to any static host (Netlify, Vercel static, S3/CloudFront, GitHub Pages, etc.).
+### GitHub Pages (recommended)
+
+This repo includes a GitHub Actions workflow at `.github/workflows/pages.yml` that deploys the site to **GitHub Pages** on every push to `main`.
+
+1. Create a GitHub repo (example name: `xfleetpro-site`).
+2. Add the remote and push:
+
+```bash
+git remote add origin YOUR_REPO_GIT_URL
+git push -u origin main
+```
+
+3. In GitHub: **Settings → Pages**
+   - **Build and deployment**: select **GitHub Actions**
+4. Ensure the custom domain is set to **`xfleetpro.com`** (this repo includes a `CNAME` file).
+
+### DNS for `xfleetpro.com`
+
+At your domain registrar / DNS provider:
+
+- For apex domain `xfleetpro.com` (A records):
+  - `185.199.108.153`
+  - `185.199.109.153`
+  - `185.199.110.153`
+  - `185.199.111.153`
+- Optional (recommended) for `www.xfleetpro.com`:
+  - CNAME `www` → `YOUR_GITHUB_USERNAME.github.io`
+
+After DNS propagates, GitHub Pages will provision TLS and your site will be live at `xfleetpro.com`.
+
+### Other hosts
+
+Because it’s static, you can also deploy by uploading these files to Netlify, Vercel static, S3/CloudFront, etc.
 
