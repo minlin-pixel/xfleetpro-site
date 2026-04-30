@@ -23,37 +23,23 @@ Then open `http://localhost:5173`.
 
 ## Deploy
 
-### GitHub Pages (recommended)
+### Vercel (via GitHub)
 
-This repo includes a GitHub Actions workflow at `.github/workflows/pages.yml` that deploys the site to **GitHub Pages** on every push to `main`.
+This repo is configured for **Vercel static hosting** (see `vercel.json`). Recommended flow:
 
-1. Create a GitHub repo (example name: `xfleetpro-site`).
-2. Add the remote and push:
+1. Push this repo to GitHub.
+2. In Vercel: **New Project → Import Git Repository** and select the repo.
+3. Framework preset: **Other** (no build step needed).
+4. Deploy.
+5. In Vercel: **Project → Settings → Domains**
+   - Add `xfleetpro.com` and (optionally) `www.xfleetpro.com`
 
-```bash
-git remote add origin YOUR_REPO_GIT_URL
-git push -u origin main
-```
+### DNS for `xfleetpro.com` (Vercel)
 
-3. In GitHub: **Settings → Pages**
-   - **Build and deployment**: select **GitHub Actions**
-4. Ensure the custom domain is set to **`xfleetpro.com`** (this repo includes a `CNAME` file).
+In your DNS provider:
 
-### DNS for `xfleetpro.com`
+- **A record** for apex `xfleetpro.com` → `76.76.21.21`
+- **CNAME** for `www` → `cname.vercel-dns.com`
 
-At your domain registrar / DNS provider:
-
-- For apex domain `xfleetpro.com` (A records):
-  - `185.199.108.153`
-  - `185.199.109.153`
-  - `185.199.110.153`
-  - `185.199.111.153`
-- Optional (recommended) for `www.xfleetpro.com`:
-  - CNAME `www` → `YOUR_GITHUB_USERNAME.github.io`
-
-After DNS propagates, GitHub Pages will provision TLS and your site will be live at `xfleetpro.com`.
-
-### Other hosts
-
-Because it’s static, you can also deploy by uploading these files to Netlify, Vercel static, S3/CloudFront, etc.
+After DNS propagates, Vercel will provision TLS and your site will be live at `xfleetpro.com`.
 
