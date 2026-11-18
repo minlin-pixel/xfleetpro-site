@@ -3,162 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact — xFleetPro</title>
-    <meta name="description" content="Contact xFleetPro for Geotab implementation, dashboards, integrations, and support." />
-    <meta name="theme-color" content="#0b5fff" />
+    <title>Contact — X Fleet Pro</title>
+    <meta name="description" content="Contact X Fleet Pro about Geotab setup, dashboards, integrations, and support." />
+    <meta name="theme-color" content="#1f5fb8" />
+    <link rel="icon" href="./assets/logo-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header" data-elevate="false">
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="xFleetPro home">
-          <img class="brand-logo" src="./assets/xfleetpro-brand.png" alt="xFleetPro" />
-        </a>
-
-        <nav class="nav" aria-label="Primary">
-          <a href="./index.html#solutions">Solutions</a>
-          <a href="./index.html#geotab">Geotab</a>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a class="nav-cta" href="./contact.html" aria-current="page">Contact</a>
-        </nav>
-
-        <button class="icon-btn" type="button" id="menuBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-          <span class="icon-bars" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <div class="mobile-nav" id="mobileNav" hidden>
-        <div class="container mobile-nav-inner">
-          <a href="./index.html#solutions">Solutions</a>
-          <a href="./index.html#geotab">Geotab</a>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a class="btn btn-primary" href="./contact.html">Contact</a>
-        </div>
-      </div>
-    </header>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header" id="site-header"></header>
 
     <main id="main">
-      <section class="page-hero">
+      <section class="page-intro">
         <div class="container">
-          <p class="eyebrow">Contact</p>
-          <h1 class="page-title">
-            Let’s improve your
-            <span class="text-gradient">Geotab</span>
-            outcomes.
-          </h1>
-          <p class="page-subtitle">
-            Tell us about your fleet and what you’re trying to improve. We’ll respond with the fastest quick wins and a recommended path.
-          </p>
+          <p class="kicker">Contact</p>
+          <h1>Tell us about your fleet</h1>
+          <p>Share a few details and we’ll reply with next steps. Prefer email? <a href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a></p>
         </div>
       </section>
 
       <section class="section">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h2>What to include</h2>
-              <p class="lead-sm">A few details help us respond with a concrete plan.</p>
-              <ul class="list">
-                <li>Fleet size and number of sites</li>
-                <li>Primary goals (safety, maintenance, utilization, reporting)</li>
-                <li>Whether you need integrations (TMS/ERP/CMMS)</li>
-                <li>Your current timeline and owners</li>
-              </ul>
-
-              <div class="callout" style="margin-top: 16px">
-                <div class="callout-title">Email</div>
-                <p class="lead-sm" style="margin-top: 8px">
-                  Prefer email? Reach us at <a class="link" href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a>.
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-card" role="region" aria-label="Contact form">
-              <h3>Talk to a Geotab expert</h3>
-              <p>We typically respond within one business day.</p>
-
-              <form class="form" id="contactForm">
-                <label>
-                  <span>Name</span>
-                  <input name="name" type="text" autocomplete="name" required />
-                </label>
-                <label>
-                  <span>Work email</span>
-                  <input name="email" type="email" autocomplete="email" required />
-                </label>
-                <label>
-                  <span>Fleet size (approx.)</span>
-                  <select name="fleetSize" required>
-                    <option value="" selected disabled>Select one…</option>
-                    <option>1–25</option>
-                    <option>26–100</option>
-                    <option>101–500</option>
-                    <option>500+</option>
-                  </select>
-                </label>
-                <label>
-                  <span>What are you trying to improve?</span>
-                  <textarea name="message" rows="5" placeholder="Safety, utilization, maintenance, reporting…" required></textarea>
-                </label>
-                <button class="btn btn-primary" type="submit">Send</button>
-                <p class="fineprint">
-                  Submitting opens your email client with the message pre-filled.
-                </p>
-              </form>
-            </div>
+        <div class="container narrow">
+          <div class="form-panel">
+            <h2>Send a message</h2>
+            <p>We’ll typically reply within one business day.</p>
+            <form class="form" id="contactForm">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Work email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Fleet size</span>
+                <select name="fleetSize" required>
+                  <option value="" selected disabled>Select…</option>
+                  <option>1–25</option>
+                  <option>26–100</option>
+                  <option>101–500</option>
+                  <option>500+</option>
+                </select>
+              </label>
+              <label>
+                <span>What do you need help with?</span>
+                <textarea name="message" rows="4" required placeholder="Geotab setup, dashboards, integrations…"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send</button>
+              <p class="note">This opens your email app with the message filled in.</p>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand footer-brand">
-            <img class="brand-logo" src="./assets/xfleetpro-brand.png" alt="xFleetPro" />
-          </div>
-          <p class="footer-note">
-            Geotab-focused implementation, analytics, and integrations for fleets that need clarity and control.
-          </p>
-          <p class="footer-fineprint">
-            © <span id="year"></span> xFleetPro. All rights reserved.
-          </p>
-          <p class="footer-fineprint">
-            Geotab is a trademark of its respective owner. xFleetPro is an independent services provider.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <div class="footer-title">Company</div>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-title">Solutions</div>
-          <a href="./index.html#solutions">Implementation</a>
-          <a href="./index.html#solutions">Dashboards</a>
-          <a href="./index.html#solutions">Integrations</a>
-          <a href="./index.html#geotab">Geotab</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-title">Get in touch</div>
-          <a href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a>
-          <a href="./contact.html">Book an assessment</a>
-        </div>
-      </div>
-    </footer>
-
+    <footer class="site-footer" id="site-footer"></footer>
     <script src="./script.js"></script>
   </body>
 </html>

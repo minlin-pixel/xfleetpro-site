@@ -3,359 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>xFleetPro — Geotab-Focused Fleet Management</title>
+    <title>X Fleet Pro — Geotab fleet services</title>
     <meta
       name="description"
-      content="xFleetPro helps fleets get more out of Geotab: implementation, data modeling, dashboards, integrations, and ongoing support."
+      content="X Fleet Pro helps fleets get clear results from Geotab: setup, dashboards, and integrations."
     />
-    <meta name="theme-color" content="#0b5fff" />
+    <meta name="theme-color" content="#1f5fb8" />
+    <link rel="icon" href="./assets/logo-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header" data-elevate="false">
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="xFleetPro home">
-          <img class="brand-logo" src="./assets/xfleetpro-brand.png" alt="xFleetPro" />
-        </a>
-
-        <nav class="nav" aria-label="Primary">
-          <a href="./index.html#solutions">Solutions</a>
-          <a href="./index.html#geotab">Geotab</a>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a class="nav-cta" href="./contact.html">Contact</a>
-        </nav>
-
-        <button class="icon-btn" type="button" id="menuBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-          <span class="icon-bars" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <div class="mobile-nav" id="mobileNav" hidden>
-        <div class="container mobile-nav-inner">
-          <a href="./index.html#solutions">Solutions</a>
-          <a href="./index.html#geotab">Geotab</a>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a class="btn btn-primary" href="./contact.html">Contact</a>
-        </div>
-      </div>
-    </header>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header" id="site-header"></header>
 
     <main id="main">
       <section class="hero">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Geotab-focused fleet enablement</p>
-            <h1>
-              Turn Geotab data into
-              <span class="text-gradient">daily decisions</span>.
-            </h1>
-            <p class="lead">
-              xFleetPro helps fleets implement, optimize, and scale on Geotab—from device rollout and rule tuning to Power BI dashboards,
-              alerts, and integrations that operators actually use.
+          <div>
+            <p class="kicker">Geotab-focused fleet services</p>
+            <h1>Clear Geotab data. Clear daily decisions.</h1>
+            <p class="lede">
+              X Fleet Pro helps fleets set up Geotab the right way, turn data into useful dashboards, and connect it to the tools you already use.
             </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Book a Geotab assessment</a>
-              <a class="btn btn-secondary" href="#geotab">Explore Geotab solutions</a>
-            </div>
-            <div class="trust-row" aria-label="Trusted platforms">
-              <div class="logo-pill">Geotab</div>
-              <div class="logo-pill">Power BI</div>
-              <div class="logo-pill">Azure</div>
-              <div class="logo-pill">API Integrations</div>
+            <div class="actions">
+              <a class="btn btn-primary" href="./contact.html">Talk with us</a>
+              <a class="btn btn-ghost" href="./company.html">What we do</a>
             </div>
           </div>
-
-          <div class="hero-card" role="region" aria-label="Outcome highlights">
-            <div class="stat-grid">
-              <div class="stat">
-                <div class="stat-kicker">Faster rollout</div>
-                <div class="stat-value">Weeks → Days</div>
-                <div class="stat-note">Standardized onboarding playbooks for devices, groups, users, and rules.</div>
-              </div>
-              <div class="stat">
-                <div class="stat-kicker">Cleaner data</div>
-                <div class="stat-value">One model</div>
-                <div class="stat-note">Normalized assets, drivers, trips, exceptions, and maintenance signals.</div>
-              </div>
-              <div class="stat">
-                <div class="stat-kicker">Operational clarity</div>
-                <div class="stat-value">Dashboards</div>
-                <div class="stat-note">Role-based views for safety, dispatch, maintenance, and finance.</div>
-              </div>
-            </div>
-            <div class="hero-card-footer">
-              <div class="mini-badge">Geotab-first approach</div>
-              <div class="mini-badge">Security-minded delivery</div>
-              <div class="mini-badge">Ongoing support</div>
-            </div>
+          <div class="hero-visual">
+            <img src="./assets/logo.jpg" alt="X Fleet Pro logo" />
           </div>
         </div>
-        <div class="hero-bg" aria-hidden="true"></div>
       </section>
 
-      <section class="section" id="solutions">
+      <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2>Purpose-built fleet solutions</h2>
+            <h2>What we help with</h2>
+            <p>Simple scope. Practical delivery. Built for people who run the fleet day to day.</p>
+          </div>
+          <ul class="offer-list">
+            <li>
+              <strong>Geotab setup</strong>
+              <span>Devices, groups, rules, and zones configured so alerts are useful—not noisy.</span>
+            </li>
+            <li>
+              <strong>Dashboards</strong>
+              <span>Power BI views for safety, utilization, maintenance, and leadership check-ins.</span>
+            </li>
+            <li>
+              <strong>Integrations</strong>
+              <span>Connect Geotab to TMS, ERP, or CMMS so teams stop re-entering the same data.</span>
+            </li>
+            <li>
+              <strong>Ongoing support</strong>
+              <span>A steady review cadence as your fleet, sites, and reporting needs change.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="band">
+            <h2>Start with a Geotab assessment</h2>
             <p>
-              Start with Geotab. Expand with data products and workflows that fit your operation—not a generic dashboard template.
+              We’ll review your current setup, flag quick wins, and share a clear 30/60/90-day plan.
             </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card">
-              <h3>Implementation & onboarding</h3>
-              <p>Device rollout planning, user/group strategy, rule tuning, and change management for safe adoption.</p>
-              <ul class="list">
-                <li>GO device deployment checklist</li>
-                <li>Exceptions & zones baseline</li>
-                <li>Driver coaching workflow</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Operations dashboards</h3>
-              <p>Operator-friendly Power BI dashboards with drilldowns, alerts, and KPI definitions everyone agrees on.</p>
-              <ul class="list">
-                <li>Safety, compliance, utilization</li>
-                <li>Idle & fuel opportunity views</li>
-                <li>Executive weekly snapshot</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Integrations & automation</h3>
-              <p>Connect Geotab to your ERP/TMS/CMMS and automate the handoffs that waste time.</p>
-              <ul class="list">
-                <li>API-based event pipelines</li>
-                <li>Work order and mileage sync</li>
-                <li>Alerting to email/Teams</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Data governance</h3>
-              <p>Make data trustworthy: definitions, access control, auditability, and retention that align to policy.</p>
-              <ul class="list">
-                <li>Role-based access patterns</li>
-                <li>Data dictionary & lineage</li>
-                <li>PII minimization guidance</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="geotab">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h2>Geotab is the platform. We help you make it yours.</h2>
-              <p class="lead-sm">
-                If you’ve ever thought “we have the data but not the outcomes,” this is for you. xFleetPro focuses on the operational layer:
-                naming standards, rules, exceptions, and reporting that match how your fleet runs.
-              </p>
-
-              <div class="pill-row" aria-label="Geotab solution areas">
-                <span class="pill">MyGeotab configuration</span>
-                <span class="pill">Rules & exceptions</span>
-                <span class="pill">Zones & routing</span>
-                <span class="pill">Maintenance signals</span>
-                <span class="pill">Safety insights</span>
-                <span class="pill">Data exports & APIs</span>
-              </div>
-
-              <div class="callout">
-                <div class="callout-title">What you get in a Geotab assessment</div>
-                <ul class="list">
-                  <li>Current-state configuration review and risk scan</li>
-                  <li>Quick-win recommendations (30/60/90 days)</li>
-                  <li>Dashboard blueprint with KPIs and owners</li>
-                </ul>
-                <a class="link" href="#contact">Request an assessment →</a>
-              </div>
-            </div>
-
-            <div class="panel">
-              <div class="panel-head">
-                <div class="panel-badge">Blueprint</div>
-                <div class="panel-title">From data to action</div>
-              </div>
-              <ol class="steps">
-                <li>
-                  <div class="step-title">Normalize</div>
-                  <div class="step-body">Make assets, drivers, trips, and exceptions consistent across sites and subsidiaries.</div>
-                </li>
-                <li>
-                  <div class="step-title">Operationalize</div>
-                  <div class="step-body">Define workflows: who gets alerts, what “good” looks like, and how follow-up happens.</div>
-                </li>
-                <li>
-                  <div class="step-title">Measure</div>
-                  <div class="step-body">Dashboards that answer the same questions every week—without spreadsheet churn.</div>
-                </li>
-                <li>
-                  <div class="step-title">Improve</div>
-                  <div class="step-body">Iterate on exceptions and coaching, and review KPIs with leadership on a cadence.</div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="customers">
-        <div class="container">
-          <div class="section-head">
-            <h2>Built for real fleets</h2>
-            <p>Vocational, field service, public sector, and transportation operations—where uptime and safety matter every day.</p>
-          </div>
-
-          <div class="quote-grid">
-            <figure class="quote">
-              <blockquote>
-                “We finally aligned on the KPIs that matter. The dashboards are simple, fast, and the supervisors actually use them.”
-              </blockquote>
-              <figcaption>
-                <div class="who">Operations Manager</div>
-                <div class="where">Mid-size field services fleet</div>
-              </figcaption>
-            </figure>
-
-            <figure class="quote">
-              <blockquote>
-                “The Geotab configuration cleanup eliminated duplicate assets and reduced false alerts. Maintenance is calmer now.”
-              </blockquote>
-              <figcaption>
-                <div class="who">Fleet Maintenance Lead</div>
-                <div class="where">Regional vocational fleet</div>
-              </figcaption>
-            </figure>
-
-            <figure class="quote">
-              <blockquote>
-                “Integrating mileage and engine hours into our CMMS saved hours each week. The automation paid for itself quickly.”
-              </blockquote>
-              <figcaption>
-                <div class="who">Systems Analyst</div>
-                <div class="where">Public administration fleet</div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="about">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h2>Engineering-first. Fleet-friendly.</h2>
-              <p class="lead-sm">
-                We combine hands-on telematics experience with pragmatic data engineering. That means fewer “cool demos” and more working
-                tools: consistent naming, governed data, dependable dashboards, and support that doesn’t disappear after go-live.
-              </p>
-              <div class="mini-grid">
-                <div class="mini-card">
-                  <div class="mini-title">Clear scope</div>
-                  <div class="mini-body">Fixed deliverables, transparent timelines, and shared ownership of outcomes.</div>
-                </div>
-                <div class="mini-card">
-                  <div class="mini-title">Security-minded</div>
-                  <div class="mini-body">Principle of least privilege and data minimization baked into delivery.</div>
-                </div>
-                <div class="mini-card">
-                  <div class="mini-title">Long-term partner</div>
-                  <div class="mini-body">Optimization cadence and enablement so your team can run it.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-card" id="contact" role="region" aria-label="Contact xFleetPro">
-              <h3>Talk to a Geotab expert</h3>
-              <p>Tell us about your fleet. We’ll respond with a recommended path and the fastest quick wins.</p>
-
-              <form class="form" id="contactForm">
-                <label>
-                  <span>Name</span>
-                  <input name="name" type="text" autocomplete="name" required />
-                </label>
-                <label>
-                  <span>Work email</span>
-                  <input name="email" type="email" autocomplete="email" required />
-                </label>
-                <label>
-                  <span>Fleet size (approx.)</span>
-                  <select name="fleetSize" required>
-                    <option value="" selected disabled>Select one…</option>
-                    <option>1–25</option>
-                    <option>26–100</option>
-                    <option>101–500</option>
-                    <option>500+</option>
-                  </select>
-                </label>
-                <label>
-                  <span>What are you trying to improve?</span>
-                  <textarea name="message" rows="4" placeholder="Safety, utilization, maintenance, reporting…" required></textarea>
-                </label>
-                <button class="btn btn-primary" type="submit">Send</button>
-                <p class="fineprint">
-                  Prefer email? Reach us at <a class="link" href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a>.
-                </p>
-              </form>
+            <div class="actions">
+              <a class="btn btn-primary" href="./contact.html">Request an assessment</a>
+              <a class="btn btn-ghost" href="./about.html">About X Fleet Pro</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand footer-brand">
-            <img class="brand-logo" src="./assets/xfleetpro-brand.png" alt="xFleetPro" />
-          </div>
-          <p class="footer-note">
-            Geotab-focused implementation, analytics, and integrations for fleets that need clarity and control.
-          </p>
-          <p class="footer-fineprint">
-            © <span id="year"></span> xFleetPro. All rights reserved.
-          </p>
-          <p class="footer-fineprint">
-            Geotab is a trademark of its respective owner. xFleetPro is an independent services provider.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <div class="footer-title">Company</div>
-          <a href="./company.html">Company</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-title">Solutions</div>
-          <a href="./index.html#solutions">Implementation</a>
-          <a href="./index.html#solutions">Dashboards</a>
-          <a href="./index.html#solutions">Integrations</a>
-          <a href="./index.html#geotab">Geotab</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-title">Get in touch</div>
-          <a href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a>
-          <a href="./contact.html">Book an assessment</a>
-        </div>
-      </div>
-    </footer>
-
+    <footer class="site-footer" id="site-footer"></footer>
     <script src="./script.js"></script>
   </body>
 </html>
