@@ -96,10 +96,46 @@ function wireInteractions() {
   const form = document.getElementById("contactForm");
   const note = document.getElementById("contactNote");
   const submitBtn = document.getElementById("contactSubmit");
+  const captchaPrompt = document.getElementById("captchaPrompt");
+  const captchaAnswer = document.getElementById("captchaAnswer");
+  const formOpenedAt = Date.now();
+  let captchaSum = 0;
+
+  function refreshCaptcha() {
+    const a = 2 + Math.floor(Math.random() * 8);
+    const b = 1 + Math.floor(Math.random() * 8);
+    captchaSum = a + b;
+    if (captchaPrompt) captchaPrompt.textContent = `What is ${a} + ${b}?`;
+    if (captchaAnswer) captchaAnswer.value = "";
+  }
+
+  if (form && captchaPrompt && captchaAnswer) refreshCaptcha();
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (form._honey?.value) return;
+
+    const elapsedMs = Date.now() - formOpenedAt;
+    if (elapsedMs < 2500) {
+      if (note) {
+        note.textContent = "Please wait a moment, then try again.";
+        note.classList.remove("note-ok");
+        note.classList.add("note-error");
+      }
+      return;
+    }
+
+    const answered = Number.parseInt(String(captchaAnswer?.value || "").trim(), 10);
+    if (!Number.isFinite(answered) || answered !== captchaSum) {
+      if (note) {
+        note.textContent = "Robot check failed. Please answer the question and try again.";
+        note.classList.remove("note-ok");
+        note.classList.add("note-error");
+      }
+      refreshCaptcha();
+      captchaAnswer?.focus();
+      return;
+    }
 
     const data = new FormData(form);
     const payload = {
@@ -132,6 +168,7 @@ function wireInteractions() {
       if (!res.ok) throw new Error("Request failed");
 
       form.reset();
+      refreshCaptcha();
       if (note) {
         note.textContent = "Message sent. We’ll get back to you soon.";
         note.classList.add("note-ok");
@@ -141,6 +178,7 @@ function wireInteractions() {
         note.textContent = "Couldn’t send right now. Email min-lin@hotmail.com instead.";
         note.classList.add("note-error");
       }
+      refreshCaptcha();
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;

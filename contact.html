@@ -55,8 +55,24 @@
                 <span>What do you need help with?</span>
                 <textarea name="message" rows="4" required placeholder="Geotab setup, dashboards, integrations…"></textarea>
               </label>
+              <fieldset class="captcha-box">
+                <legend>Robot check</legend>
+                <label class="captcha-row">
+                  <span id="captchaPrompt">What is 0 + 0?</span>
+                  <input
+                    id="captchaAnswer"
+                    name="captchaAnswer"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    required
+                    aria-describedby="captchaHelp"
+                  />
+                </label>
+                <p class="captcha-help" id="captchaHelp">Answer the question to confirm you’re human.</p>
+              </fieldset>
               <button class="btn btn-primary" type="submit" id="contactSubmit">Send</button>
-              <p class="note" id="contactNote">Your message is sent privately to us—no email app needed.</p>
+              <p class="note" id="contactNote">Protected against bots. Your message is sent privately—no email app needed.</p>
             </form>
           </div>
         </div>

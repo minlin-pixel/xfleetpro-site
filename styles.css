@@ -485,6 +485,42 @@ textarea:focus {
   pointer-events: none;
 }
 
+.captcha-box {
+  margin: 0;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f4f8fd;
+}
+
+.captcha-box legend {
+  padding: 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.captcha-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.captcha-row span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.captcha-row input {
+  max-width: 8rem;
+}
+
+.captcha-help {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* Footer */
 .site-footer {
   margin-top: 3rem;
