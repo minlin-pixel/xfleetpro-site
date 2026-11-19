@@ -21,7 +21,7 @@
         <div class="container">
           <p class="kicker">Contact</p>
           <h1>Tell us about your fleet</h1>
-          <p>Share a few details and we’ll reply with next steps. Prefer email? <a href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a></p>
+          <p>Share a few details and we’ll reply with next steps. Prefer email? <a href="mailto:min-lin@hotmail.com">min-lin@hotmail.com</a></p>
         </div>
       </section>
 
@@ -31,6 +31,8 @@
             <h2>Send a message</h2>
             <p>We’ll typically reply within one business day.</p>
             <form class="form" id="contactForm">
+              <input type="hidden" name="_subject" value="X Fleet Pro — website inquiry" />
+              <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <label>
                 <span>Name</span>
                 <input name="name" type="text" autocomplete="name" required />
@@ -53,8 +55,8 @@
                 <span>What do you need help with?</span>
                 <textarea name="message" rows="4" required placeholder="Geotab setup, dashboards, integrations…"></textarea>
               </label>
-              <button class="btn btn-primary" type="submit">Send</button>
-              <p class="note">This opens your email app with the message filled in.</p>
+              <button class="btn btn-primary" type="submit" id="contactSubmit">Send</button>
+              <p class="note" id="contactNote">Your message is sent privately to us—no email app needed.</p>
             </form>
           </div>
         </div>

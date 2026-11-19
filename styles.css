@@ -466,6 +466,25 @@ textarea:focus {
   color: var(--muted);
 }
 
+.note-ok {
+  color: #1a7a45;
+  font-weight: 600;
+}
+
+.note-error {
+  color: #b42318;
+  font-weight: 600;
+}
+
+.honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Footer */
 .site-footer {
   margin-top: 3rem;

@@ -59,7 +59,7 @@ function renderChrome() {
           <a href="./company.html">Company</a>
           <a href="./about.html">About</a>
           <a href="./contact.html">Contact</a>
-          <a href="mailto:hello@xfleetpro.com">hello@xfleetpro.com</a>
+          <a href="mailto:min-lin@hotmail.com">min-lin@hotmail.com</a>
         </div>
       </div>
       <div class="container footer-meta">
@@ -94,20 +94,59 @@ function wireInteractions() {
   });
 
   const form = document.getElementById("contactForm");
-  form?.addEventListener("submit", (e) => {
+  const note = document.getElementById("contactNote");
+  const submitBtn = document.getElementById("contactSubmit");
+
+  form?.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (form._honey?.value) return;
+
     const data = new FormData(form);
-    const subject = encodeURIComponent("X Fleet Pro — inquiry");
-    const body = encodeURIComponent(
-      [
-        `Name: ${String(data.get("name") || "").trim()}`,
-        `Email: ${String(data.get("email") || "").trim()}`,
-        `Fleet size: ${String(data.get("fleetSize") || "").trim()}`,
-        "",
-        String(data.get("message") || "").trim(),
-      ].join("\n")
-    );
-    window.location.href = `mailto:hello@xfleetpro.com?subject=${subject}&body=${body}`;
+    const payload = {
+      name: String(data.get("name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      fleetSize: String(data.get("fleetSize") || "").trim(),
+      message: String(data.get("message") || "").trim(),
+      _subject: String(data.get("_subject") || "X Fleet Pro — website inquiry"),
+    };
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+    }
+    if (note) {
+      note.textContent = "Sending your message…";
+      note.classList.remove("note-ok", "note-error");
+    }
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/min-lin@hotmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      form.reset();
+      if (note) {
+        note.textContent = "Message sent. We’ll get back to you soon.";
+        note.classList.add("note-ok");
+      }
+    } catch {
+      if (note) {
+        note.textContent = "Couldn’t send right now. Email min-lin@hotmail.com instead.";
+        note.classList.add("note-error");
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send";
+      }
+    }
   });
 }
 
